@@ -69,7 +69,7 @@ const ResultsPage: React.FC = () => {
   const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
   const SEARCH_ENGINE_ID = process.env.REACT_APP_SEARCH_ENGINE_ID;
   const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
-  const NEWS_API_KEY = "d60eacc5d8fd4a809d1dfa78aefeae4e";
+  const NEWS_API_KEY = process.env.REACT_APP_NEWS_API_KEY;
    // Replace with your key
 
   useEffect(() => {
@@ -275,8 +275,8 @@ const ResultsPage: React.FC = () => {
   const performNewsSearch = async (query: string, page: number): Promise<ApiResponse> => {
     try {
       const response = await fetch(
-        `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&apiKey=${NEWS_API_KEY}&pageSize=${resultsPerPage}&page=${page}`
-      );
+  `https://newsapi.org/v2/top-headlines?q=${encodeURIComponent(query)}&language=en&pageSize=${resultsPerPage}&page=${page}&apiKey=${NEWS_API_KEY}`
+);
       
       if (!response.ok) {
         throw new Error(`News API error: ${response.status}`);
