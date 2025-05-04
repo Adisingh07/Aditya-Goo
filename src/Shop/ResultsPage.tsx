@@ -69,7 +69,7 @@ const ResultsPage: React.FC = () => {
   const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
   const SEARCH_ENGINE_ID = process.env.REACT_APP_SEARCH_ENGINE_ID;
   const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
-  const NEWS_API_KEY = process.env.REACT_APP_NEWS_API_KEY;
+  const NEWS_API_KEY = "d60eacc5d8fd4a809d1dfa78aefeae4e";
    // Replace with your key
 
   useEffect(() => {
