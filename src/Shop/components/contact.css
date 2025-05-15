@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* More modern font */
+    background-color: #ddd4ec ;/* Slightly warmer light background */
+    color: #444; /* Darker, softer text color */
+    line-height: 1.6; /* Improved readability */
+}
+    /* Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+
+.contact-container {
+    max-width: 900px; /* Slightly wider container */
+    margin: 50px auto; /* More top margin */
+    padding: 30px; /* Increased padding */
+    background-color: #d4cef2 ; /* White container background */
+    border-radius: 8px; /* Soft rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  }
+  
+  .contact-container h1 {
+    color: #00aaff;
+  }
+  
+  .contact-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-container label {
+    text-align: left;
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
+  
+  .contact-container input,
+  .contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #edecf7;
+    color: rgb(22, 17, 17);
+  }
+  
+  .contact-container textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .contact-container button {
+    background: #00aaff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-container button:hover {
+    background: #0088cc;
+  }
+  @media (max-width: 768px) {
+    
+
+    .header h1 {
+        font-size: 2rem;
+    }
+}
+/* Header Wrapper */
+.header {
+  background-color: #3D52A0; /* Primary dark blue */
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo Link */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #EDE8F5; /* Light lavender text */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #ADBBD4; /* Subtle hover tone */
+}
+

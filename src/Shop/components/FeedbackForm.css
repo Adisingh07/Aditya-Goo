@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* More modern font */
+    background-color: #ddd4ec ;/* Slightly warmer light background */
+    color: #444; /* Darker, softer text color */
+    line-height: 1.6; /* Improved readability */
+}
+    /* Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+.feedback-container {
+  max-width: 900px; /* Slightly wider container */
+    margin: 50px auto; /* More top margin */
+    padding: 30px; /* Increased padding */
+    background-color: #d4cef2 ; /* White container background */
+    border-radius: 8px; /* Soft rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.feedback-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input,
+.textarea,
+.file-input {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.rating-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.emoji-rating {
+  display: flex;
+  gap: 12px;
+  font-size: 42px;
+}
+
+.emoji-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.emoji-button:hover {
+  transform: scale(1.2);
+}
+
+.emoji-button.selected {
+  filter: drop-shadow(0 0 4px orange);
+}
+
+.submit-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #1e40af;
+}
+
+.status-message {
+  text-align: center;
+  font-size: 14px;
+  color: green;
+}
+
+h2 {
+  font-size: 28px;
+  color: #2e2e5d; /* Darker purple tone */
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 22px;
+  color: #3d3d63; /* Medium-dark text */
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}

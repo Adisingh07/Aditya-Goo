@@ -1,0 +1,45 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* More modern font */
+    background-color: #EDE8F5 ;/* Slightly warmer light background */
+    color: #444; /* Darker, softer text color */
+    line-height: 1.6; /* Improved readability */
+}
+    /* Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+
+
+/* Header */
+/* Header Wrapper */
+
+
+/* Container */
+.container {
+    max-width: 900px; /* Slightly wider container */
+    margin: 50px auto; /* More top margin */
+    padding: 30px; /* Increased padding */
+    background-color: #d4cef2 ; /* White container background */
+    border-radius: 8px; /* Soft rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+}
+
+
+/* Footer */

@@ -1,0 +1,261 @@
+/* Header */
+.header {
+  background-color: #3D52A0;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #EDE8F5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #ADBBD4;
+}
+
+/* Title */
+.roadmap-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #212121;
+  letter-spacing: -0.5px;
+}
+
+/* Roadmap Container */
+.roadmap-container {
+  position: relative;
+  max-width: 600px;
+  margin: 30px auto;
+  padding-left: 50px;
+}
+
+.roadmap-container::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #BDBDBD;
+  opacity: 0.7;
+}
+
+.roadmap-container.completed-phase1::after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  height: 120px;
+  width: 3px;
+  background: #4CAF50;
+  z-index: 1;
+}
+
+/* Phases */
+.phase {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  padding: 25px 25px 25px 70px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: 1px solid #E0E0E0;
+}
+
+.phase:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.phase-marker {
+  position: absolute;
+  left: -10px;
+  top: 25px;
+  width: 50px;
+  height: 50px;
+  background-color: #6200EE;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid white;
+  box-shadow: 0 0 0 4px #BDBDBD;
+}
+
+.phase1 .phase-marker { background: #E91E63; }
+.phase2 .phase-marker { background: #FF9800; }
+.phase3 .phase-marker { background: #9C27B0; }
+.phase4 .phase-marker { background: #4CAF50; }
+.phase5 .phase-marker { background: #03A9F4; }
+
+.phase-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #212121;
+}
+
+.phase-subtext {
+  font-size: 15px;
+  color: #555;
+}
+
+/* Modal */
+.phase-detail-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px 35px;
+  border-radius: 16px;
+  max-width: 95%;
+  width: 500px;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #777;
+  transition: color 0.2s ease-in-out;
+}
+
+.close-btn:hover {
+  color: #212121;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Announcement */
+.phase-announcement {
+  background-color: #f3f6fd;
+  border-left: 5px solid #3D52A0;
+  padding: 16px 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  border-radius: 8px;
+  margin: 20px 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.phase-announcement strong {
+  color: #3D52A0;
+}
+
+.phase-announcement em {
+  font-style: normal;
+  font-weight: bold;
+  color: #7091E6;
+}
+
+/* Footer */
+.footer {
+  background: #F8F9FA;
+  color: #777;
+  padding: 35px 0;
+  text-align: center;
+  margin-top: 60px;
+  border-top: 1px solid #E0E0E0;
+}
+
+.footer-links {
+  margin-bottom: 18px;
+}
+
+.footer-links a {
+  color: #555;
+  margin: 0 18px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #7091E6;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #999;
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+  .roadmap-title {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .roadmap-container {
+    padding-left: 40px;
+  }
+
+  .roadmap-container::before {
+    left: 15px;
+  }
+
+  .roadmap-container.completed-phase1::after {
+    left: 15px;
+  }
+
+  .phase {
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 35px;
+  }
+
+  .phase-marker {
+    left: -5px;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .phase-title {
+    font-size: 18px;
+  }
+
+  .modal-content {
+    padding: 20px 25px;
+  }
+
+  .close-btn {
+    font-size: 24px;
+    top: 10px;
+    right: 10px;
+  }
+}
